@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --light-pink: hsl(275, 100%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-image: url('./assets/images/background-pattern-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--light-pink);
+  font-family: "Work Sans", sans-serif;
+}
+
+@media screen and (min-width:768px) {
+  body{
+    background-image: url('./assets/images/background-pattern-desktop.svg');
+  }
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 500px;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 20px 20px;
+  margin: 0 30px;
+}
+
+.header {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+
+.title-item {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+  align-items: center;
+}
+
+.item-description {
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.item-description.visible {
+  max-height: 500px;
+  /* o el valor máximo deseado */
+  margin: auto;
+}
